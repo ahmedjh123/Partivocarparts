@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold text-background-dark dark:text-background-light">AutoParts</h1>
+</div>
+<nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+<a class="text-background-dark/80 dark:text-background-light/80 hover:text-primary" href="#">Shop</a>
+<a class="text-background-dark/80 dark:text-background-light/80 hover:text-primary" href="#">Services</a>
+<a class="font-bold text-primary" href="#">About Us</a>
+<a class="text-background-dark/80 dark:text-background-light/80 hover:text-primary" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+</svg>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCh8wHFFHuO4QAT3QMmZk_WzczuB4wR0rmuNK6MenBlJvuSuGs_2XbSBYiQ_8ldT2zQBu70AaPkx3UWN3YgLIX7Hf3hWSNHttaN5pppN0s1hAwnAFabfjbSKaDDf6ddAwUNqwpsBv4UquBI8oP44vS9XnilUDbe1hvUYKBOnpgYdgsliHlzh6UCVVtAuClWC_LULsPi9XmiPZMyqUfsmJ1gXzBd-NHLbYJOyOSejfd8xpj2ecJmAQg03APpRItzjO9xMUHYuH6q53c");'></div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-4xl">
+<div class="mb-12 text-center">
+<h2 class="text-4xl font-extrabold tracking-tight text-background-dark dark:text-background-light sm:text-5xl">About Us</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-background-dark/70 dark:text-background-light/70">Our story, our mission, and our unwavering commitment to you.</p>
+</div>
+<div class="space-y-16">
+<section>
+<h3 class="mb-4 text-2xl font-bold text-background-dark dark:text-background-light">Our Mission</h3>
+<p class="text-base leading-relaxed text-background-dark/80 dark:text-background-light/80">At AutoParts, we're more than just an online store; we're a community of automotive enthusiasts dedicated to providing top-quality car spare parts and exceptional customer service. Our journey began with a simple passion for cars and a desire to make finding the right parts easier and more reliable for everyone. We strive to be the leading online destination for car spare parts, offering a vast selection from trusted manufacturers. We're committed to quality, affordability, and making the process as seamless as possible.</p>
+</section>
+<section>
+<h3 class="mb-6 text-2xl font-bold text-background-dark dark:text-background-light">Our Values</h3>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<div class="rounded-lg bg-background-light p-6 shadow-sm dark:bg-background-dark/50">
+<h4 class="mb-2 font-bold text-primary">Integrity</h4>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">We believe in honesty and transparency in all our dealings.</p>
+</div>
+<div class="rounded-lg bg-background-light p-6 shadow-sm dark:bg-background-dark/50">
+<h4 class="mb-2 font-bold text-primary">Quality</h4>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">We only offer parts that meet our high standards of performance and reliability.</p>
+</div>
+<div class="rounded-lg bg-background-light p-6 shadow-sm dark:bg-background-dark/50">
+<h4 class="mb-2 font-bold text-primary">Customer Focus</h4>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">Your satisfaction is our priority. We're here to support and grow with our fellow car enthusiasts.</p>
+</div>
+</div>
+</section>
+<section>
+<h3 class="mb-8 text-center text-2xl font-bold text-background-dark dark:text-background-light">Meet the Team</h3>
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<div class="text-center">
+<div class="mx-auto h-32 w-32 rounded-full bg-cover bg-center bg-no-repeat shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOUf6bAxuJ16M8b4bbLt1RQ_LLvJcqS_ijDvyvnQ5iDwsNrYktAKTZ2n1vHNsveqQO9GsZubFofs2r6EFrYvvBKjAPeaKYXc5bQCzH2pwujHe5YuS7EwKa1gpAx_GfY1OecNcOfmQZogcFzsCgahMTWQN-llOYywUlyG4MdJOhkVqlJJuz6hURKfZRlcAcI24enRpHguyWaJuuO6rfrN2zj0FaWhLAjyeSZGNOdX6lKMjI7vD1DEz10KobOSKkABZdQHhZNgDN67E");'></div>
+<h4 class="mt-4 text-lg font-semibold text-background-dark dark:text-background-light">Sarah Johnson</h4>
+<p class="text-sm text-primary">CEO</p>
+</div>
+<div class="text-center">
+<div class="mx-auto h-32 w-32 rounded-full bg-cover bg-center bg-no-repeat shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUKuBiQMqXHv1_x_xdEiqY90M4lIUxcnKzV0FF22ugJGcFtMmhSLfNAhuEePqapMkXQwp917yrayCT_n_l02vFvxFEqsqqbFBjg5G9_tCpp_T9FxbS_7HW23DzRkXP77HcPWiGfmkSlDlowy--9XNuicoNTlkrME5Gu-lcFGsn8O9YD_YBpd3roTmqvvQ4U2gqbXW12kfmUeY7H9MulURNTV_HNFu7s0-ay-TmB-5BV8aHMvpws6AQWyKPYdlYadsDfhbJ8J21GDc");'></div>
+<h4 class="mt-4 text-lg font-semibold text-background-dark dark:text-background-light">Mark Thompson</h4>
+<p class="text-sm text-primary">Head of Sales</p>
+</div>
+<div class="text-center">
+<div class="mx-auto h-32 w-32 rounded-full bg-cover bg-center bg-no-repeat shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtzmQdVffwjljjsyKFdOrQxGeUNqN2sz6eqyvxaSvv8mb5Z2euHQUpIrCZXCR6mI8NQPhvzq1ibegqy1iUAqHPakJIk-uDz2yO0_BS4j0PvXcBh6NcpvVZFNQGs7iVTsF1LoHaHmI7QBCrevUCxsUQ7yiF8-eJZR60XR6SJBokbXltmUq0LT6OFv8qGWucOxxRKjRkLK9q0vagA2Nu4vsH_fOXdoesAWU-7w4mproOMDrqIDKLKbmRbWGpiBJwVaByRibN3AGFRuw");'></div>
+<h4 class="mt-4 text-lg font-semibold text-background-dark dark:text-background-light">Emily Davis</h4>
+<p class="text-sm text-primary">Customer Support Lead</p>
+</div>
+</div>
+</section>
+<section>
+<h3 class="mb-8 text-center text-2xl font-bold text-background-dark dark:text-background-light">Our Journey</h3>
+<div class="relative">
+<div class="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-primary/20"></div>
+<div class="space-y-12">
+<div class="relative flex items-center">
+<div class="hidden md:block md:w-1/2 md:pr-8 text-right">
+<p class="font-bold text-lg text-background-dark dark:text-background-light">Founded AutoParts</p>
+<p class="text-background-dark/70 dark:text-background-light/70">2018</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 transform rounded-full bg-primary p-2 text-white">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path>
+</svg>
+</div>
+<div class="w-full md:w-1/2 md:pl-8">
+<div class="rounded-lg bg-background-light p-4 shadow-sm dark:bg-background-dark/50 md:hidden">
+<p class="font-bold text-lg text-background-dark dark:text-background-light">Founded AutoParts</p>
+<p class="text-background-dark/70 dark:text-background-light/70">2018</p>
+</div>
+</div>
+</div>
+<div class="relative flex items-center">
+<div class="w-full md:w-1/2 md:pr-8 text-right">
+<div class="rounded-lg bg-background-light p-4 shadow-sm dark:bg-background-dark/50">
+<p class="font-bold text-lg text-background-dark dark:text-background-light">Expanded Product Line</p>
+<p class="text-background-dark/70 dark:text-background-light/70">2020</p>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 transform rounded-full bg-primary p-2 text-white">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"></path>
+</svg>
+</div>
+<div class="hidden md:block md:w-1/2"></div>
+</div>
+<div class="relative flex items-center">
+<div class="hidden md:block md:w-1/2 md:pr-8 text-right">
+<p class="font-bold text-lg text-background-dark dark:text-background-light">Reached 10,000 Customers</p>
+<p class="text-background-dark/70 dark:text-background-light/70">2022</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 transform rounded-full bg-primary p-2 text-white">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path>
+</svg>
+</div>
+<div class="w-full md:w-1/2 md:pl-8">
+<div class="rounded-lg bg-background-light p-4 shadow-sm dark:bg-background-dark/50 md:hidden">
+<p class="font-bold text-lg text-background-dark dark:text-background-light">Reached 10,000 Customers</p>
+<p class="text-background-dark/70 dark:text-background-light/70">2022</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="text-center">
+<p class="text-base text-background-dark/80 dark:text-background-light/80">Thank you for being a part of our journey. We look forward to serving you and your automotive needs for many years to come.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark/50">
+<div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+<a class="text-background-dark/70 hover:text-primary dark:text-background-light/70 dark:hover:text-primary" href="#">Terms of Service</a>
+<a class="text-background-dark/70 hover:text-primary dark:text-background-light/70 dark:hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-background-dark/70 hover:text-primary dark:text-background-light/70 dark:hover:text-primary" href="#">Contact Us</a>
+</div>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">© 2024 AutoParts. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

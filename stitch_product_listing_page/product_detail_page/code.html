@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auto Parts Product Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a2530",
+              "text-light": "#0d141b",
+              "text-dark": "#e7edf3",
+              "subtle-light": "#6b7f92",
+              "subtle-dark": "#a0b3c6",
+              "border-light": "#e1e7ee",
+              "border-dark": "#2c3e50",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-20 w-full border-b border-border-light bg-surface-light/80 backdrop-blur-sm dark:border-border-dark dark:bg-surface-dark/80">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-xl font-bold" href="#">
+<span class="material-symbols-outlined text-primary text-3xl"> directions_car </span>
+<span>AutoParts</span>
+</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-subtle-light hover:text-primary dark:text-subtle-dark dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-text-light dark:text-text-dark" href="#">Parts</a>
+<a class="text-sm font-medium text-subtle-light hover:text-primary dark:text-subtle-dark dark:hover:text-primary transition-colors" href="#">Brands</a>
+<a class="text-sm font-medium text-subtle-light hover:text-primary dark:text-subtle-dark dark:hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-subtle-light dark:text-subtle-dark"> search </span>
+<input class="w-full rounded-lg border-border-light bg-background-light py-2 pl-10 pr-4 text-sm focus:border-primary focus:ring-primary dark:border-border-dark dark:bg-background-dark" placeholder="Search parts..." type="text"/>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-background-light hover:bg-primary/10 dark:bg-background-dark dark:hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined"> shopping_cart </span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+<div class="mb-6">
+<nav aria-label="Breadcrumb" class="flex text-sm">
+<ol class="inline-flex items-center space-x-1 md:space-x-2">
+<li class="inline-flex items-center">
+<a class="inline-flex items-center text-subtle-light hover:text-primary dark:text-subtle-dark dark:hover:text-primary" href="#"> Home </a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark text-lg"> chevron_right </span>
+<a class="ml-1 text-subtle-light hover:text-primary dark:text-subtle-dark dark:hover:text-primary" href="#"> Parts </a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark text-lg"> chevron_right </span>
+<span class="ml-1 font-medium text-text-light dark:text-text-dark"> Engine Parts </span>
+</div>
+</li>
+</ol>
+</nav>
+</div>
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+<div>
+<div class="grid grid-cols-2 grid-rows-2 gap-4">
+<div class="col-span-2 row-span-2 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD21Otv8W_19cNzv0Nd203S81P5dSAB06RnSc-pSEakH8ghT1iikgC2OmRM4_JjrAV-c2XQbMC2Zmev3zNtu6xMBoMQkcylPvCqhzZBkCcIJG-CodikB6tFA6ejvWCJR_zROOSYn8XhMrD0K89AJYYZCXR2y-LZ3s4jxgStwEQ1cYJWD3Tviu7xlk5YG5Q9UDbotCTufxx4vyiwZq4onLA61Ihj4h7VbUGWtJL34vdhhcFd5kDWOW17ys6Z0YpRoMbz2ACOuT67Kws");'></div>
+<div class="rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXXpcSTgIP0un3cH1Zu4A0V8niVogdM2kd82sJGUEBNPDN4c3qvaWHzKlWxstW0u6k1-DkDME1FQwD82pfRm9s95vwHXb6KAtDgzXyE8s_NcFKOcyXI29EaYkWqEfdngv6dHg7DM4EPvZkBd32hTA-wOWK5-X5LiTKhkZU71U1cpQ5YCmI3osNcpp7-S_kDr2eAkbY4QlikzBHGcKGeUckpyBhwqS6gjrq_aUjCu7XGo5GUFGdw4gFcKEPZo0V_i9jjrwS2iVLBug");'></div>
+<div class="rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYtyofj0HNHL9v3nNEFWfWHuybXX8HENbqfM-cQS_ipKC1nC_g0bREuIMQnd3f5fzWhMeW2DP0Zc7q6Bzz_CuItZfPN_jfBGxXo6aDcHB3Qfd10usMg7eNm6RdtC5LLATI7FwumSkct8ii_Ubv-MIhoBanznH07MEpEXT7AQum8KG0rZxR98CNfDSC9AzzOrtWdX6XOAyYwPUKJnOZ2Bza94-kPRM1-FAkkJ3Qta47kfv9bze0pcofzYL7JwtmDfqZMblkTJ_htCo");'></div>
+</div>
+</div>
+<div class="rounded-lg bg-surface-light p-6 dark:bg-surface-dark">
+<h1 class="text-3xl font-bold tracking-tight">Engine Air Filter</h1>
+<div class="mt-4">
+<p class="text-3xl font-bold text-primary">$29.99</p>
+</div>
+<div class="mt-6">
+<h3 class="text-lg font-semibold">Product Details</h3>
+<div class="mt-4 space-y-4">
+<div class="grid grid-cols-3 gap-4 border-b border-border-light pb-4 dark:border-border-dark">
+<dt class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Brand</dt>
+<dd class="col-span-2 text-sm">AutoParts Inc.</dd>
+</div>
+<div class="grid grid-cols-3 gap-4 border-b border-border-light pb-4 dark:border-border-dark">
+<dt class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Model</dt>
+<dd class="col-span-2 text-sm">Model X</dd>
+</div>
+<div class="grid grid-cols-3 gap-4 border-b border-border-light pb-4 dark:border-border-dark">
+<dt class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Year</dt>
+<dd class="col-span-2 text-sm">2018-2022</dd>
+</div>
+<div class="grid grid-cols-3 gap-4 border-b border-border-light pb-4 dark:border-border-dark">
+<dt class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Engine Type</dt>
+<dd class="col-span-2 text-sm">2.0L Turbo</dd>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<dt class="text-sm font-medium text-subtle-light dark:text-subtle-dark">SKU</dt>
+<dd class="col-span-2 text-sm">AP-EF-2022</dd>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark" type="button">
+<span class="material-symbols-outlined"> add_shopping_cart </span>
+                  Add to Cart
+                </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

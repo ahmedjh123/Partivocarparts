@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auto Parts Store</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-black dark:text-white">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-20 border-b border-black/10 dark:border-white/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a class="flex items-center space-x-2" href="#">
+<span class="material-symbols-outlined text-primary text-3xl">directions_car</span>
+<span class="text-xl font-bold">AutoParts</span>
+</a>
+<nav class="hidden md:flex items-center space-x-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="hidden md:block relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-black/50 dark:text-white/50">search</span>
+<input class="bg-black/5 dark:bg-white/5 border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-primary focus:outline-none w-48 lg:w-64 transition-all" placeholder="Search" type="search"/>
+</div>
+<button class="relative p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">2</span>
+</button>
+<button class="md:hidden p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<aside class="w-full lg:w-1/4 xl:w-1/5">
+<div class="sticky top-24">
+<h2 class="text-lg font-bold mb-4">Filters</h2>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium mb-1" for="year">Year</label>
+<select class="w-full bg-background-light dark:bg-background-dark border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary" id="year">
+<option>Select Year</option>
+<option>2023</option>
+<option>2022</option>
+<option>2021</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium mb-1" for="make">Make</label>
+<select class="w-full bg-background-light dark:bg-background-dark border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary" id="make">
+<option>Select Make</option>
+<option>Toyota</option>
+<option>Honda</option>
+<option>Ford</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium mb-1" for="model">Model</label>
+<select class="w-full bg-background-light dark:bg-background-dark border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary" id="model">
+<option>Select Model</option>
+<option>Camry</option>
+<option>Civic</option>
+<option>F-150</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium mb-1" for="vin">VIN</label>
+<input class="w-full bg-background-light dark:bg-background-dark border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary" id="vin" placeholder="Enter VIN" type="text"/>
+</div>
+</div>
+</div>
+</aside>
+<div class="w-full lg:w-3/4 xl:w-4/5">
+<div class="mb-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-black/50 dark:text-white/50 text-2xl">search</span>
+<input class="w-full bg-background-light dark:bg-background-dark border border-black/10 dark:border-white/10 rounded-lg pl-12 pr-4 py-3 text-base focus:ring-primary focus:border-primary" placeholder="Search for parts by name, category..." type="search"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="bg-background-light dark:bg-background-dark/70 rounded-lg overflow-hidden border border-black/10 dark:border-white/10 group flex flex-col">
+<div class="relative">
+<div class="aspect-square w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjH5Jtl5xmU2d1hnbvMPTvkk2CWi7bqdy6-hn2IWTiWi7RPCGjEzOq9OGsbGi6ugwPPkq73FS5MIqBuo3RQEpwOoOa3_-vGXrR9eEUFfvOoVU2_Hsice-bXMUZeqUrCyFiyiV0MLBYuBtxR21Spi1KoHl5pCMhM7vtgB0kGsEXzJ0Ni9tU9RWVajaPABd2uqPN6UEPLaiWT5Lt5vV-1nfpqK3U_O2FVa6sp_VUPSSdbNgxZDEBI20gJnedOadj8JaL5N4EqJNGWcQ");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-sm text-black/60 dark:text-white/60">Brand X</p>
+<h3 class="font-semibold flex-grow">Brake Pads</h3>
+<p class="text-sm text-black/60 dark:text-white/60">2021</p>
+<div class="flex items-center justify-between mt-4">
+<p class="font-bold text-lg text-primary">$45.99</p>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark/70 rounded-lg overflow-hidden border border-black/10 dark:border-white/10 group flex flex-col">
+<div class="relative">
+<div class="aspect-square w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1W638McgnLX09GNqT3upH7QUcK8OoL0TnptlyyU-q_gWmsT_D93tbndscvQiw5Hn986jjaO6guoAzCVAUBnESFRAZ_D0UWJ1J-2ZtA46SYOOebW6iFR6TL4cqgFnG_q8R3dOs-43mNsfN0kipLPgAZgLmdAwgTNrSRM9E-X8rljxmFxZMLHW1Hgs3V070o4CMD-vfKd75JfIO4vHGy8BEGeB8AG4GlJJBDQUKz6B1rmGOF6oZoY_n2dlwOt-F-rGCdfNuRmV6R98");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-sm text-black/60 dark:text-white/60">Brand Y</p>
+<h3 class="font-semibold flex-grow">Engine Air Filter</h3>
+<p class="text-sm text-black/60 dark:text-white/60">2020</p>
+<div class="flex items-center justify-between mt-4">
+<p class="font-bold text-lg text-primary">$22.50</p>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark/70 rounded-lg overflow-hidden border border-black/10 dark:border-white/10 group flex flex-col">
+<div class="relative">
+<div class="aspect-square w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnUNnWwumHSIbyosVpYdg0vjDPL_lCYaFBVOdICJJelV_6x9RfqLXRe2fKttjN2zSRNdMxKTiRWCTJ6yk3DIVUEHsGN7KZsN-ZVGEzPxLb-cwoF21wRW1K42xAhj3QWnoNrJGzSoTuNdrnXjorAqSdKLKbH8_abKGhj1VTL-4CiwpKGMPOCwG7UgmEJMS-pt_6epMfPSR_gCubmINN4h1-z6qsVokYgSI99pbXkfqJKPMYwbOHSqM9XPMD7ape9wfnxZZ9_Fss-gs");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-sm text-black/60 dark:text-white/60">Brand Z</p>
+<h3 class="font-semibold flex-grow">Spark Plugs (4-pack)</h3>
+<p class="text-sm text-black/60 dark:text-white/60">2019</p>
+<div class="flex items-center justify-between mt-4">
+<p class="font-bold text-lg text-primary">$35.00</p>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark/70 rounded-lg overflow-hidden border border-black/10 dark:border-white/10 group flex flex-col">
+<div class="relative">
+<div class="aspect-square w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiGL0izC4ax3A0lgu3-ix94XicmJFC22zGDjNfTXrDhtn14BwXzo4JAD5GS-LPlOuJ7eDz0QSZdYr-YD3uxkMVG7fjR5s3oA2yX2tENmbhIt_AvBf8lHa5_pby2KPGTd3-ixAuoE3k841-vVxUXLkf3BGOY7Ayg0rv5vL_MapWMMdYXpaV6fI13092eNkx7aROyZGVDe3cUadEJam66otitNCxeRgD-3wLeRVynBbyKuNOBFChAKg64ZDn__YczvBnyfCpsMY1p6Y");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-sm text-black/60 dark:text-white/60">Brand A</p>
+<h3 class="font-semibold flex-grow">Headlight Assembly</h3>
+<p class="text-sm text-black/60 dark:text-white/60">2022</p>
+<div class="flex items-center justify-between mt-4">
+<p class="font-bold text-lg text-primary">$120.00</p>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark/70 rounded-lg overflow-hidden border border-black/10 dark:border-white/10 group flex flex-col">
+<div class="relative">
+<div class="aspect-square w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCR2RYbx4TOpICgLi4AGETDI2VR2i3LLKWRV42ZBJy18bzudP4ibu5CEwf5cyCcrNzj95fSbe3LnVyIJ3vZNeBr2AxIcaiKjR8Umk3t4CvMwmsSlGE12Oowah_cjDo1DGG-pPF8C25obGVec1Bj_ij8IGPQMGWuTIcoCm2J1po2DXfy-ep3DhKa6vLvg54nVGymxn8x7AJLucpXUdE_6WCVMRgp_ZmP_UHgMlfwVNlOltckCoSSWG5goh123FOhT8T6ZNOD9nZBjXw");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-sm text-black/60 dark:text-white/60">Brand B</p>
+<h3 class="font-semibold flex-grow">Suspension Kit</h3>
+<p class="text-sm text-black/60 dark:text-white/60">2021</p>
+<div class="flex items-center justify-between mt-4">
+<p class="font-bold text-lg text-primary">$250.75</p>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark/70 rounded-lg overflow-hidden border border-black/10 dark:border-white/10 group flex flex-col">
+<div class="relative">
+<div class="aspect-square w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpCYsZFfrzOCO8aeXhTsHSSlEfN4h5kcfLaT2MriEmLmq6RUmOCHOrSdb7qOTAq8ioXzmXbjA0RVGdc44lpzsJ9A8-9CRd_U07Ci8yroJbHOKjN-Jwk4oEOf--4J2VDHaqdARvF4EfijTSHbB6M6BBRRCfGV6d0HtgZoZLza9inaWL9jFAJpIoJYa-mjUbUZJl2lmcZUfIXnQMTMGv45Ri3mYOOjpPHBDDSOJL-1ICBh63ldnZmc_4qwibZclId0huAzMHmtT739I");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-sm text-black/60 dark:text-white/60">Brand C</p>
+<h3 class="font-semibold flex-grow">Wheel Bearing</h3>
+<p class="text-sm text-black/60 dark:text-white/60">2023</p>
+<div class="flex items-center justify-between mt-4">
+<p class="font-bold text-lg text-primary">$65.00</p>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-center items-center space-x-2">
+<a class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-primary text-white font-semibold" href="#">1</a>
+<a class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-medium" href="#">2</a>
+<a class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-medium" href="#">3</a>
+<span class="px-2">...</span>
+<a class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-medium" href="#">8</a>
+<a class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-black/10 dark:border-white/10 mt-12">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-bold mb-4">Shop</h3>
+<ul class="space-y-2 text-sm text-black/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Performance</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Exterior</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Interior</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Lighting</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold mb-4">Support</h3>
+<ul class="space-y-2 text-sm text-black/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold mb-4">Company</h3>
+<ul class="space-y-2 text-sm text-black/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold mb-4">Stay Connected</h3>
+<div class="flex space-x-4">
+<a class="text-black/60 dark:text-white/60 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-black/60 dark:text-white/60 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="text-black/60 dark:text-white/60 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.011 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.011-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.791 2.01 10.145 2 12.315 2zm-1.002 3.655a5.538 5.538 0 100 11.075 5.538 5.538 0 000-11.075zm-1.622 8.76a3.228 3.228 0 116.456 0 3.228 3.228 0 01-6.456 0zM17.432 5.552a1.28 1.28 0 11-2.56 0 1.28 1.28 0 012.56 0z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-black/10 dark:border-white/10 pt-8 text-center text-sm text-black/60 dark:text-white/60">
+<p>© 2024 AutoParts. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
